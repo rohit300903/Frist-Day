@@ -1,0 +1,61 @@
+a = 15
+b = 12
+
+# Adding two numbers
+res = a + b
+print(res)
+
+a = 7
+b = 3
+print(min(a, b))
+
+
+a = 5
+b = 10
+
+if a < b:
+    print(a)
+else:
+    print(b)
+
+
+    a = [10, 15, 23, 42, 37, 51, 62, 5]
+
+for i in a:
+    if i % 2 != 0:
+        print(i)
+
+
+ x = 5
+y = 10
+
+x, y = y, x
+print("x =", x)
+print("y =", y)
+#without using temporary variable
+
+a=[2,3,4,5,6]
+a.append(45)
+a.append("rihard")
+
+print(a)
+
+a=[1,2,3]
+a[2]=67
+a.append(5)
+a.append(90)
+print(a)
+print(len(a))
+
+fruits = ["apple","banana","cherry"]
+num = [1,7,8,2,5,6,45.7]
+num.sort(reverse=True)
+print(num)
+fruits.reverse
+print(fruits)
+
+
+a=[1,2,3,4]
+b=a.copy()
+print(b)
+

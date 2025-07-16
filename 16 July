@@ -1,0 +1,19 @@
+# Function 1: First Name + Last Name
+def full_name(fname, lname):
+    print(fname + " " + lname)
+
+full_name("Rohit", "coder")
+
+
+# Function 2: Using *args
+def youngest_child_from_args(*kids):
+    print("The youngest child is " + kids[2])
+
+youngest_child_from_args("P1", "P2", "P3")
+
+
+# Function 3: Using keyword arguments
+def youngest_child_named(child1, child2, child3):
+    print("The youngest child is " + child3)
+
+youngest_child_named(child1="Akshay", child2="Akshay2", child3="Akshay3")

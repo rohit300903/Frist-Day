@@ -1,0 +1,30 @@
+Q.1
+def greet(name):
+    print(f"Hello, {name}!")
+
+# Example call
+greet("Rohit")
+Q.2
+def add(a, b):
+    return a + b
+
+# Example call
+result = add(5, 3)
+print("The sum is:", result)
+
+Q.3
+def display(*args):
+    for arg in args:
+        print(arg)
+
+# Example call
+display("Hello", 123, True, 45.6)
+
+Q.4
+def student_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+# Example call
+student_info(name="Rohit", age=18, roll_number=101)
+

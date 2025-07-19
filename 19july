@@ -1,0 +1,60 @@
+# Statement about AI
+#AI uses both structured and unstructured data, but unstructured data is used more in AI.
+
+# Function definition
+def my_function(n, l):
+    print("Hello World")  # Note: this is slang/humorous; change if needed for professionalism
+
+# Function call with example arguments
+def my_function(a, b, /, *, c, d):
+    print(a + b + c + d)
+
+my_function(5, 10, c=5, d=15)
+
+
+def is_palindrome(s):
+    if len(s) <= 1:
+        return True
+    if s[0] != s[-1]:
+        return False
+    return is_palindrome(s[1:-1])  # Fixed typo: 'retrun' → 'return'
+
+word = input("Enter a word: ")
+if is_palindrome(word):
+    print(f"{word} is a palindrome")
+else:
+    print(f"{word} is not a palindrome")
+
+
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name  # 'self' refers to the current object
+        self.age = age
+
+    def display_info(self):
+        print("Name:", self.name)
+        print("Age:", self.age)
+
+# Creating an object of the Person class
+person1 = Person("Rohit", 25)
+
+# Calling the method to display info
+person1.display_info()
+
+
+
+def decorator1(func):
+    print("Decorator is called")
+    func()
+    print("Decorator is finished")
+    return decorator1
+
+@decorator1
+
+def my_function():
+    print("Hello World")
+my_function
+
+
+

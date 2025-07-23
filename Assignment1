@@ -1,0 +1,433 @@
+ASSIGNMENT-1
+Q.1 What are the data structure and why they are important ?
+-> Data structures are ways to organize and store data in a computer so that it can be efficiently accessed, modified, and manipulated. They provide a way to manage large amounts of data, making it possible to perform operations such as sorting, searching, and inserting data. Data structures are essential in computer science, and their importance cannot be overstated.
+Importance of data structure
+Data structures are a fundamental concept in computer science, and their importance cannot be overstated. They play a crucial role in the development of efficient, scalable, and maintainable software systems. Here are some reasons why data structures are important:
+
+1. Efficient Data Storage and Retrieval
+Data structures enable efficient storage and retrieval of data, which is critical in many applications. By using the right data structure, developers can reduce the time complexity of algorithms and improve the performance of their systems.
+
+2. Improved Algorithm Performanc
+Data structures can significantly impact the performance of algorithms. By choosing the right data structure, developers can reduce the time complexity of algorithms and improve their overall performace
+
+3. Scalability
+Data structures enable systems to handle large amounts of data, making them scalable. By using data structures that can handle large datasets, developers can build systems that can scale to meet the needs of their users.
+
+4. Simplified Code
+Data structures can simplify code and make it easier to maintain. By using data structures, developers can write more efficient and readable code, which reduces the likelihood of errors and makes it easier to debug.
+
+5. Enhanced Problem-Solving
+Data structures provide a way to represent and manipulate data, which enables developers to solve complex problems. By using data structures, developers can break down complex problems into smaller, more manageable pieces, and solve them more efficiently.
+
+6. Better Data Management
+Data structures enable better data management, which is critical in many applications. By using data structures, developers can manage large amounts of data, reduce data redundancy, and improve data consistency.
+
+7. Improved System Performance
+Data structures can significantly impact the performance of systems. By using data structures that are optimized for performance, developers can build systems that are faster, more efficient, and more responsive.
+
+8. Real-World Applications
+Data structures have numerous real-world applications, including database management, web search engines, file systems, compilers, and artificial intelligence. By understanding data structures, developers can build systems that are more efficient, scalable, and maintainable.
+
+9. Foundation for Advanced Concepts
+Data structures provide a foundation for advanced concepts, such as algorithms, machine learning, and data science. By understanding data structures, developers can build a strong foundation for more advanced topics.
+
+10. Critical Thinking and Problem-Solving
+Data structures require critical thinking and problem-solving skills, which are essential for developers. By understanding data structures, developers can improve their critical thinking and problem-solving skills, which can help them tackle complex problems and build more efficient systems.
+
+Q.2 Explain the difference between mutable and immutable data types with examples ?
+-> In programming, data types can be classified into two categories: mutable and immutable. The main difference between the two is that mutable data types can be modified after they are created, while immutable data types cannot be changed once they are created.
+Mutable data types:-
+Mutable data types are those that can be modified after they are created. Examples of mutable data types include:
+
+- Lists: Lists are a type of data structure that can store multiple values. They are mutable, meaning that elements can be added, removed, or modified after the list is created.
+- Dictionaries: Dictionaries are a type of data structure that store key-value pairs. They are mutable, meaning that key-value pairs can be added, removed, or modified after the dictionary is created.
+- Sets: Sets are a type of data structure that store unique values. They are mutable, meaning that elements can be added or removed after the set is created.
+
+Immutable data types:-
+Immutable data types are those that cannot be modified after they are created. Examples of immutable data types include:
+
+- Integers: Integers are a type of numeric data type that represents whole numbers. They are immutable, meaning that once an integer is created, its value cannot be changed.
+- Floats: Floats are a type of numeric data type that represents decimal numbers. They are immutable, meaning that once a float is created, its value cannot be changed.
+- Strings: Strings are a type of data type that represents a sequence of characters. They are immutable, meaning that once a string is created, its value cannot be changed.
+- Tuples: Tuples are a type of data structure that store multiple values. They are immutable, meaning that once a tuple is created, its elements cannot be modified.
+Q.3 What are the main difference between list and tuples in python ?
+->Lists and tuples are two fundamental data structures in Python that can store multiple values. While they share some similarities, there are key differences between them.
+
+Lists:-
+- Mutable: Lists are mutable, meaning they can be modified after creation.
+- Defined by square brackets: Lists are defined using square brackets [].
+- Elements can be added or removed: Elements can be added or removed from a list using methods like append(), insert(), and remove().
+
+Example:-
+
+my_list = [1, 2, 3]
+my_list.append(4)
+print(my_list)  # Output: [1, 2, 3, 4]
+
+
+Tuples:-
+- Immutable: Tuples are immutable, meaning they cannot be modified after creation.
+- Defined by parentheses: Tuples are defined using parentheses ().
+- Elements cannot be changed: Elements in a tuple cannot be changed after creation.
+
+Example:-
+
+my_tuple = (1, 2, 3)
+try:
+    my_tuple[0] = 4
+except TypeError:
+    print("Tuples are immutable!")
+
+Q.4 Describe how dictionaries store data ?
+-> Dictionaries are a fundamental data structure in Python that store data in key-value pairs. They are also known as associative arrays or hash tables. Dictionaries are a powerful tool for storing and manipulating data, and they are widely used in many different applications.
+
+How Dictionaries Store Data:-
+Dictionaries store data in a way that allows for efficient lookup, insertion, and deletion of key-value pairs. Here's a detailed explanation of how dictionaries store data:
+
+- Key-Value Pairs: Dictionaries store data as key-value pairs, where each key is unique and maps to a specific value. The key is used to identify the value, and the value can be any type of object, including strings, integers, floats, and other dictionaries.
+- Hash Table: Dictionaries use a hash table data structure to store key-value pairs. The hash table is an array of slots, and each slot corresponds to a specific key. When a key-value pair is added to a dictionary, the key is hashed using a hash function, and the resulting hash code determines the slot in the hash table where the key-value pair will be stored.
+- Hash Function: The hash function is a critical component, as it determines the slot in the hash table where the key-value pair will be stored. Python's hash function is designed to be fast and efficient, and it produces a hash code that is unique to each key.
+- Collision Resolution: In cases where two keys generate the same hash code (known as a collision), Python uses a collision resolution technique to store the key-value pairs in the same slot. The collision resolution technique used by Python is a combination of open addressing and linear probing.
+
+Q.5 Why might you use a set instead of list in python ?
+->  Sets and lists are both syntax and purpose, but they serve different use cases.
+
+Lists:-
+- Ordered collection: Lists are ordered collections of items, meaning that the order of the items matters.
+- Mutable: Lists are mutable, meaning that they can be modified after creation.
+- Index-based access: Lists allow index-based access to their elements.
+
+Sets:-
+- Unordered collection: Sets are unordered collections of unique items, meaning that the order of the items does not matter.
+- Mutable: Sets are mutable, meaning that they can be modified after creation.
+- No duplicates: Sets automatically eliminate duplicates, ensuring that all elements are unique.
+
+Why Use a Set Instead of a List?
+You might use a set instead of a list in the following situations:
+
+- Fast membership testing: Sets provide fast membership testing, allowing you to quickly check if an item is in the set or not. This is particularly useful when working with large datasets.
+- Unique elements: Sets automatically eliminate duplicates, making them ideal for situations where you need to store a collection of unique items.
+- Set operations: Sets provide a range of set operations, including union, intersection, and difference, which can be useful for performing complex operations on collections of data.
+
+Example:-
+Here's an example of using a set instead of a list:
+
+my_list = [1, 2, 2, 3, 4, 4, 5]
+my_set = set(my_list)
+print(my_set)  # Output: {1, 2, 3, 4, 5}
+
+In this example, the list my_list contains duplicate elements, but the set my_set automatically eliminates the duplicates.
+
+When to Use a Set:-
+You should use a set in the following situations:
+
+- You need to store a collection of unique items: Sets are ideal for situations where you need to store a collection of unique items, and you don't care about the order of the items.
+- You need fast membership testing: Sets provide fast membership testing, making them ideal for situations where you need to quickly check if an item is in the collection or not.
+- You need to perform set operations: Sets provide a range of set operations, including union, intersection, and difference, which can be useful for performing complex operations on collections of data.
+
+Q.6 What is string in python and how it is different from a list ? 
+->In Python, a string is a sequence of characters enclosed in quotes (either single quotes or double quotes). Strings are immutable, meaning that they cannot be changed after they are created.
+Difference between string and list:-
+Here are some key differences between strings and lists in Python:
+
+- Immutability: Strings are immutable, while lists are mutable.
+- Sequence type: Both strings and lists are sequence types, but strings are a sequence of characters, while lists are a sequence of arbitrary objects.
+- Indexing and slicing: Both strings and lists support indexing and slicing, but strings are immutable, so slicing. However, strings do not support item assignment, while lists do.
+
+Q.7 How do tuples ensures data integrity in python ?
+-> Tuples are a type of data structure in Python that can store multiple values. One of the key features of tuples is that they are immutable, meaning that their contents cannot be modified after creation. This immutability ensures data integrity in several ways:
+
+How Tuples Ensure Data Integrity:-
+1. Immutability: Tuples are immutable, which means that once a tuple is created, its contents cannot be changed. This ensures that the data in the tuple remains consistent and predictable.
+2. Prevents Unintended Changes: Because tuples are immutable, they prevent unintended changes to the data. This is particularly important when working with data that should not be changed, such as constants or data that is used in critical calculations.
+3. Thread-Safe: Tuples are thread-safe. Because tuples are immutable, they can be safely shared between threads without the risk of one thread modifying the tuple and affecting other threads.
+
+Benefits of Using Tuples for Data Integrity:-
+1. Ensures Predictability: Tuples ensure that the data is predictable and consistent, which is important in many applications.
+2. Prevents Bugs: By preventing unintended changes to the data, tuples can help prevent bugs and errors in the code.
+3. Improves Code Readability: Tuples can improve code readability by making it clear that the data is not intended to be changed.
+
+Q.8 What is a Hash table and how does it relate to dictionaries in python?
+-> A hash table, also known as a hash map, is a data structure that stores key-value pairs in an array using a hash function to map keys to indices of the array. The hash function generates a hash code for each key, which is used to determine the index at which the corresponding value is stored.
+
+How Hash Tables Work:-
+Here's a high-level overview of how hash tables work:
+
+1. Key-Value Pairs: Hash tables store key-value pairs, where each key is unique and maps to a specific value.
+2. Hash Function: A hash function is used to generate a hash code for each key. The hash code is an integer that determines the index at which the corresponding value is stored.
+3. Array: The hash table uses an array to store the key-value pairs. The array is divided into slots, each of which corresponds to a specific hash code.
+4. Collision Resolution: When two keys generate the same hash code (known as a collision), the hash table uses a collision resolution technique to store the key-value pairs in the same slot.
+
+Relation to Dictionaries in Python:-
+ In Python, dictionaries are implemented using hash tables. When you create a dictionary and add key-value pairs to it, Python uses a hash function to generate a hash code for each key and stores the corresponding value in an array.
+
+Hash Tables in Dictionaries Benefits of Using:-
+1. Fast Lookup: Hash tables provide fast lookup of values by their keys, with an average time complexity of O(1).
+2. Efficient Insertion and Deletion: Hash tables allow for efficient insertion and deletion of key-value pairs, with an average time complexity of O(1).
+3. Good Performance: Hash tables provide good performance for large datasets, making them suitable for a wide range of applications.
+
+ Q.9 Can lists contain different data types in python ?
+-> Yes, lists in Python can contain different data types. Lists are a heterogeneous collection of items, meaning that they can store items of different data types, such as integers, floats, strings, and other lists.
+Q.10 Explain why strings are immutable in python ?
+-> Strings in Python are immutable, meaning that they cannot be changed after they are created. This immutability provides several benefits and is a fundamental aspect of the Python language.
+
+Why Strings are Immutable:-
+1. Security: Immutable strings prevent malicious code from modifying sensitive data, such as passwords or cryptographic keys.
+2. Thread Safety: Immutable strings are thread-safe, meaning that multiple threads can access the same string without fear of one thread modifying the string and affecting other threads.
+3. Performance: Immutable strings can improve performance by allowing Python to cache and reuse string objects, reducing the overhead of creating new string objects.
+4. Code Simplicity: Immutable strings simplify code by ensuring that strings are not changed unexpectedly, making it easier to reason about code behavior.
+Q.11 What advantages do dictionaries offer over lists for certain tasks ?
+-> Dictionaries and lists are both fundamental data structures in Python, but they serve different purposes and offer different advantages. Here are some advantages of dictionaries over lists for certain tasks:
+
+Advantages of Dictionaries:-
+1. Fast Lookup: Dictionaries provide fast lookup of values by their keys, with an average time complexity of O(1). This makes them ideal for tasks that require frequent lookups.
+2. Efficient Data Retrieval: Dictionaries allow you to retrieve data by its key, which can be more efficient than searching through a list.
+3. Data Organization: Dictionaries provide a way to organize data in a key-value format, making it easier to access and manipulate data.
+4. Flexibility: Dictionaries can store a wide range of data types, including strings, integers, floats, and other dictionaries.
+
+Q.12 Describe a scenario where tuple using would be preferable over a list ?
+-> Tuples and lists are both data structures in Python that can store multiple values. However, there are certain scenarios where tuples are preferable over lists.
+
+Scenario: Using Tuples as Dictionary Keys:-
+One scenario where tuples are preferable over lists is when using them as dictionary keys. Tuples are immutable, which makes them hashable and suitable for use as dictionary keys. Lists, on the other hand, are mutable and cannot be used as dictionary keys.
+
+Example
+Here's an example that demonstrates the use of tuples as dictionary keys:
+
+# Create a dictionary with tuples as keys
+student_grades = {
+    ("John", "Math"): 90,
+    ("John", "Science"): 85,
+    ("Jane", "Math"): 95,
+    ("Jane", "Science"): 90
+}
+
+# Lookup a student's grade
+print(student_grades[("John", "Math")])  # Output: 90
+
+In this example, we use tuples to store student names and subjects, which allows us to use them as dictionary keys.
+
+Q.13 How  do sets handle duplicate values in python ?
+-> Sets in Python are an unordered collection of unique elements. When you add duplicate values to a set, Python automatically removes the duplicates, ensuring that the set only contains unique elements.
+
+How Sets Handle Duplicate Values:-
+1. Automatic Duplicate Removal: Sets automatically remove duplicate values when you add them to the set.
+2. Unique Elements: Sets only store unique elements, which means that you can't have duplicate values in a set.
+
+Example:-
+Here's an example that demonstrates how sets handle duplicate values:
+
+# Create a set
+my_set = {1, 2, 2, 3, 4, 4, 5}
+print(my_set)  # Output: {1, 2, 3, 4, 5}
+
+# Add a duplicate value to the set
+my_set.add(2)
+print(my_set)  # Output: {1, 2, 3, 4, 5}
+
+In this example, we create a set with duplicate values, and Python automatically removes the duplicates. When we add a duplicate value to the set, Python ignores it and the set remains unchanged.
+
+Q.14 How does the “in” keyword work differently for lists and dictionaries ?
+-> The "in" keyword in Python is used to check if a value is present in a collection. However, the way it works differs between lists and dictionaries.
+
+Lists:-
+For lists, the "in" keyword checks if a value is present in the list. It iterates over the list and returns True if the value is found, and False otherwise.
+
+Example:-
+
+my_list = [1, 2, 3, 4, 5]
+print(2 in my_list)  # Output: True
+print(6 in my_list)  # Output: False
+
+Dictionaries:-
+For dictionaries, the "in" keyword checks if a key is present in the dictionary. It returns True if the key is found, and False otherwise. Note that it does not check for values.
+
+Example:-
+
+my_dict = {"name": "John", "age": 30}
+print("name" in my_dict)  # Output: True
+print("city" in my_dict)  # Output: False
+print("John" in my_dict)  # Output: False (because "John" is a value, not a key)
+Q.15 Can you modify the elements of a tuple ? explain why & why not ?
+-> Tuples in Python are an immutable data structure, meaning that their contents cannot be modified after creation.
+
+Why Can't Tuples be Modified?
+1. Immutability: Tuples are designed to be immutable, which means that their contents cannot be changed after creation.
+2. Hashability: Tuples are hashable, which means that they can be used as dictionary keys. If tuples were mutable, their hash value could change, which would make them unsuitable for use as dictionary keys.
+
+Attempting to Modify a Tuple:-
+If you try to modify a tuple, you will get a TypeError.
+
+Example:-
+
+my_tuple = (1, 2, 3)
+try:
+    my_tuple[0] = 10
+except TypeError:
+    print("Tuples are immutable!")
+
+Q.16 What is nested dictionary and give an example of its use case ?
+-> A nested dictionary is a dictionary that contains another dictionary as its value. This allows for complex data structures and hierarchical organization of data.
+
+Example:-
+Here's an example of a nested dictionary:
+
+student = {
+    "name": "John",
+    "age": 20,
+    "grades": {
+        "Math": 90,
+        "Science": 85,
+        "English": 95
+    }
+}
+
+In this example, the student dictionary contains a nested dictionary grades that stores the student's grades for different subjects.
+
+Use Case:-
+Nested dictionaries are useful when you need to store complex data with hierarchical relationships. For example, you can use nested dictionaries to:
+
+1. Store student information: As shown in the example above, you can use nested dictionaries to store student information, including their grades for different subjects.
+2. Represent JSON data: Nested dictionaries can be used to represent JSON data, which is commonly used in web development.
+3. Model complex data: Nested dictionaries can be used to model complex data with hierarchical relationships, such as organizational structures or product catalogs.
+
+Q.17 Describe the time complexity of accesing elements in a dictionary ?
+-> The time complexity of accessing elements in a dictionary in Python is O(1), also known as constant time complexity. This means that the time it takes to access an element in a dictionary does not depend on the size of the dictionary.
+
+Why is Dictionary Access O(1)?
+1. Hash Table: Dictionaries in Python are implemented as hash tables, which allow for fast lookup of keys.
+2. Hash Function: When you access a key in a dictionary, Python uses a hash function to map the key to a specific index in the hash table.
+3. Direct Access: Once the index is calculated, Python can directly access the corresponding value in the hash table.
+
+Example:-
+Here's an example that demonstrates the fast lookup of dictionary elements:
+
+my_dict = {"name": "John", "age": 30}
+print(my_dict["name"])  # Output: John
+
+In this example, accessing the value associated with the key "name" takes constant time, regardless of the size of the dictionary.
+Q.18 In what situations are lists preffered over dictionaries ?
+->  Lists and dictionaries are both fundamental data structures in Python, but they serve different purposes and are suited for different situations. Here are some situations where lists are preferred over dictionaries:
+
+Situations Where Lists are Preferred:-
+1. Ordered Data: Lists are preferred when you need to store ordered data, such as a sequence of events or a list of items that need to be processed in a specific order.
+2. Index-Based Access: Lists are preferred when you need to access elements by their index, such as when working with arrays or matrices.
+3. Homogeneous Data: Lists are preferred when you need to store homogeneous data, such as a list of numbers or a list of strings.
+4. Frequent Insertion/Deletion: Lists are preferred when you need to frequently insert or delete elements at arbitrary positions, such as in a queue or a stack.
+
+Examples:-
+1. Queue Implementation: Lists are well-suited for implementing queues, where elements are added and removed from the front and rear of the list.
+2. Stack Implementation: Lists are well-suited for implementing stacks, where elements are added and removed from the top of the list.
+3. Matrix Operations: Lists are well-suited for representing matrices and performing matrix operations, such as matrix multiplication.
+
+Q.19 Why are  dictionaries considered unordered and how does that affect data retrieval ?
+-> Dictionaries in Python are considered unordered data structures, meaning that the order of the key-value pairs is not guaranteed. However, this changed in Python 3.7, where dictionaries maintain their insertion order.
+
+Why are Dictionaries Considered Unordered?
+1. Hash Table Implementation: Dictionaries are implemented as hash tables, which store key-value pairs in a way that allows for fast lookup. The order of the key-value pairs is determined by the hash values of the keys.
+2. No Inherent Order: Unlike lists, dictionaries do not have an inherent order, and the order of the key-value pairs can change when the dictionary is modified.
+How Does Unordered Affect Data Retrieval?
+1. No Index-Based Access:
+ Because dictionaries are unordered, you cannot access elements by their index. Instead, you must access elements by their key.
+2. Key-Based Access: Dictionaries provide fast lookup of values by their keys, regardless of the order of the key-value pairs.
+3. No Reliance on Order: When retrieving data from a dictionary, you should not rely on the order of the key-value pairs. Instead, access the data by its key.
+
+Example:-
+Here's an example that demonstrates accessing data in a dictionary:
+
+my_dict = {"name": "John", "age": 30}
+print(my_dict["name"])  # Output: John
+
+In this example, we access the value associated with the key "name" without relying on the order of the key-value pairs.
+Q.20 Explain the difference between a lists and a dictionary in terms of data retrieval ?
+-> Lists and dictionaries are two fundamental data structures in Python that serve different purposes and have different data retrieval mechanisms.
+
+Lists: Index-Based Access;-
+1. Access by Index: Lists are ordered collections of elements that can be accessed by their index.
+2. Sequential Access: Lists can be accessed sequentially using a loop or indexing.
+
+Example: List Access;-
+
+my_list = [1, 2, 3, 4, 5]
+print(my_list[0])  # Output: 1
+
+Dictionaries: Key-Based Access:-
+1. Access by Key: Dictionaries are unordered collections of key-value pairs that can be accessed by their key.
+2. Fast Lookup: Dictionaries provide fast lookup of values by their keys.
+
+Example: Dictionary Access:-
+my_dict = {"name": "John", "age": 30}
+print(my_dict["name"])  # Output: John
+
+Key Differences:-
+1. Access Mechanism: Lists are accessed by index, while dictionaries are accessed by key.
+2. Data Structure: Lists are ordered collections, while dictionaries are unordered collections of key-value pairs.
+3. Lookup Speed: Dictionaries provide fast lookup of values by their keys, while lists require sequential access or indexing.
+
+Choosing Between Lists and Dictionaries:-
+1. Use lists when you need to store ordered data or access elements by index.
+2. Use dictionaries when you need to store key-value pairs or access data by key.
+
+PRACTICAL QUESTIONS:-
+ Q.1 Write a code to  create a string with your name and print it?
+->  # creat a string with my name 
+       my _name = “akshay”
+    # print the string 
+       print(my_name)
+output:-
+akshay
+Q.2 Write a code to find the length of the string “hellow world” ?
+->  my_string =”hellow world”
+      Length = len(my_string)
+     Print(“ the length of the string is:”,length)
+ Output:-
+The length of string is :13
+Q.3 Write a code to slice the first 3 charaters from the string “python programming”?
+->   my_string  =  “python    programming”
+       Sliced = my_string [:3]
+       Print(“the first 3 charaters are :”,sliced)
+Output:-
+The first 3 charaters are :pyt.
+Q.4 Write a code to covert the string “ hellow “ to uppercase.?
+ ->  my_ string  = “ hellow “
+     Upper_string = my_string.upper()
+     Print(“uppercase string:”, upper_string)
+     Output:-
+Uppercase  string : hellow.
+Q.5 Write a code to replace the world “ apple “with “orange” in the string “ I like apple”, ?
+->  my_string = “ I like apple”
+      New_string = my_string . replace (“apple”, “orange”)
+      Print(“update string:”, new_string)
+      Output:-
+      updated string : I like orange.
+Q.6 Write a code to create a list with numbers 1 to 5  and  print it.?
+->     numbers = [1,2,3,4,5]
+    Print(“ list of numbers:”, numbers)
+  Ouput:-
+List of numbers = [1,2,3,4]
+Q.7 write a code to append the number 10 to the list [1,2,3,4] ?
+ ->  numbers = [1,2,3,4]
+       numbers. Append (10)
+       print(“update list:”,numbers)
+output:-
+updated list : [1,2,3,4,10]
+
+Q.8 Write a code to remove the number 3 from the  list [1,2,3,4,5] ?
+ ->  numbers = [1,2,3,4,5]
+       numbers.remove (3)
+       print (“ updated list:”,numbers)
+   output:- 
+updated list : [1,2,3,4,5]
+
+Q.9 Write a code to access the  second element in the list [‘a’,’b’,’c’,’d’] ?
+  -> letters = [‘a’,’b’,’c’,’d’]
+       Second_element  = letter [1]
+       Print (“the second element is :”, second_element)
+        Output:-
+     Second element is : b
+Q.10 Write a code to reverse the  list [ 10,20,30,40,50] ?
+  ->  numbers = [10,20,30,40,50]
+        Numbers.reverse ()
+        Print (“reversed list:”,numbers)
+        Output:-
+     Reversed list : [50,40,30,20,10]

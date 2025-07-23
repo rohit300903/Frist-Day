@@ -1,0 +1,150 @@
+#Theory Questions:
+1. What is the difference between a function and a method in Python?
+In Python, a function is a block of reusable code that performs a specific task and can be defined independently using the def keyword. 
+    It can be called without being associated with any object. On the other hand, a method is a function that is associated with an object and is called using the object or class it belongs to. 
+    Methods are used in object-oriented programming and operate on the data contained in the object. 
+    The main difference lies in their association: functions are independent, while methods are tied to objects.
+   
+2. Explain the concept of function arguments and parameters in Python.
+Parameters are the variables listed in the function definition, while arguments are the actual values passed to the function when it is called. 
+    Parameters act as placeholders, and arguments provide actual data for those placeholders. 
+        Python supports various types of arguments: positional, keyword, default, variable-length (*args and **kwargs). Understanding the difference helps in writing flexible and reusable functions.
+    
+3. What are the different ways to define and call a function in Python?
+Functions in Python can be defined using the def keyword followed by a function name and parameters. Another way is using lambda functions for simple, single-line functions. 
+            Once defined, functions are called using their name followed by parentheses. Built-in functions (like len()) are also callable. 
+    Functions can be invoked with or without arguments depending on their definition. 
+        This modular approach makes programs more organized and easier to maintain.
+
+4. What is the purpose of the return statement in a Python function?
+The return statement is used to exit a function and send a result back to the caller. 
+    It allows the function to output data after execution. Without return, a function will return None by default. 
+    The statement can return any data type or even multiple values. It is essential for using the function’s result in further operations, making it a key feature for data processing and logical flow in programs.
+
+5. What are iterators in Python and how do they differ from iterables?
+An iterable is an object capable of returning its elements one by one (e.g., lists, tuples, strings). 
+    An iterator is an object that implements the iterator protocol with the methods __iter__() and __next__(). 
+        The key difference is that an iterable can be converted to an iterator using the iter() function, while an iterator produces the next item using next(). Iterators are useful for looping through data efficiently, especially when dealing with large data sets.
+
+6. Explain the concept of generators in Python and how they are defined.
+Generators are a type of iterable, defined like functions but using the yield keyword instead of return. 
+They produce items one at a time and pause their state between calls, allowing for lazy evaluation. 
+    This means they don’t store all values in memory, making them efficient for handling large data or infinite sequences. 
+        They automatically implement the iterator protocol and are useful in loops or data pipelines.
+
+7. What are the advantages of using generators over regular functions?
+Generators offer several advantages:
+
+Memory Efficiency: They don’t store all values in memory.
+
+Lazy Evaluation: Values are generated on demand.
+
+Improved Performance: Especially for large or infinite data.
+
+Clean Syntax: Easy to implement using yield.
+
+Better Resource Management: Suitable for streaming data or file handling.
+
+These features make generators ideal for processing large datasets efficiently.
+
+8. What is a lambda function in Python and when is it typically used?
+A lambda function is an anonymous, inline function defined using the lambda keyword. 
+    It can take multiple arguments but must consist of a single expression. 
+    Lambda functions are typically used for short-term tasks like sorting, filtering, or mapping where defining a full function is unnecessary. 
+    They are commonly used in functional programming constructs like map(), filter(), and reduce().
+
+9. Explain the purpose and usage of the map() function in Python.
+The map() function applies a given function to all items in an iterable and returns a new iterable (map object) with the results. It simplifies operations like transformation or modification of data elements without using explicit loops. map() is efficient and makes the code more readable. It is often used with lambda functions for concise operations on data collections.
+
+10. What is the difference between map(), reduce(), and filter() functions in Python?
+**map()** applies a function to every element in an iterable.
+
+**filter()** selects elements that meet a certain condition.
+
+**reduce()** cumulatively applies a function to reduce the iterable to a single value.
+
+While map() and filter() return iterables, reduce() returns a single result. reduce() must be imported from functools. These are all examples of functional programming tools in Python.
+
+11. Using pen & paper write the internal mechanism for sum operation using reduce function on this list: [47, 11, 42, 13]
+The reduce() function takes a binary function and applies it cumulatively to the items of a list from left to right:
+
+First step: 47 + 11 = 58
+
+Second step: 58 + 42 = 100
+
+Third step: 100 + 13 = 113
+    #PRACTICAL QUESTIONS:
+1. Function to return sum of all even numbers in a list
+
+def sum_even_numbers(numbers):
+    return sum(num for num in numbers if num % 2 == 0)
+2. Function to reverse a string
+
+def reverse_string(s):
+    return s[::-1]
+3. Function to return squares of numbers in a list
+
+def square_list(numbers):
+    return [num ** 2 for num in numbers]
+4. Function to check if a number is prime (from 1 to 200)
+
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5)+1):
+        if n % i == 0:
+            return False
+    return True
+5. Iterator class for Fibonacci sequence
+
+class Fibonacci:
+    def __init__(self, max_terms):
+        self.max_terms = max_terms
+        self.a, self.b = 0, 1
+        self.count = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.count >= self.max_terms:
+            raise StopIteration
+        self.a, self.b = self.b, self.a + self.b
+        self.count += 1
+        return self.a
+6. Generator function for powers of 2 up to a given exponent
+
+def powers_of_two(n):
+    for i in range(n + 1):
+        yield 2 ** i
+7. Generator that reads a file line by line
+
+def read_file_lines(filename):
+    with open(filename, 'r') as file:
+        for line in file:
+            yield line.strip()
+8. Lambda to sort list of tuples by second element
+
+data = [(1, 4), (2, 1), (3, 5)]
+sorted_data = sorted(data, key=lambda x: x[1])
+9. map() to convert Celsius to Fahrenheit
+
+celsius = [0, 20, 37, 100]
+fahrenheit = list(map(lambda c: (c * 9/5) + 32, celsius))
+10. filter() to remove all vowels from a string
+
+def remove_vowels(text):
+    return ''.join(filter(lambda x: x.lower() not in 'aeiou', text))
+11. Accounting routine using lambda and map
+
+orders = [
+    [34587, "Learning Python, Mark Lutz", 4, 40.95],
+    [98762, "Programming Python, Mark Lutz", 5, 56.80],
+    [77226, "Head First Python, Paul Barry", 3, 32.95],
+    [88112, "Einführung in Python3, Bernd Klein", 3, 24.99]
+]
+
+# Lambda + map solution
+final_orders = list(map(lambda order: 
+    (order[0], order[2]*order[3] if order[2]*order[3] >= 100 else order[2]*order[3] + 10), 
+    orders))

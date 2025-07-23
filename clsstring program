@@ -1,0 +1,16 @@
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    @classmethod
+    def from_string(cls, student_str):
+        name, age = student_str.split("-")
+        return cls(name, int(age))
+
+    def __str__(self):
+        return f"Name: {self.name}, Age: {self.age}"
+
+# Creating object using class method
+s1 = Student.from_string("Rohit-21")
+print(s1)

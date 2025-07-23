@@ -1,0 +1,23 @@
+class Vehicle:
+    def __init__(self, name):
+        self.name = name
+
+    def start(self):
+        print(f"{self.name} is starting")
+
+
+class Car(Vehicle):
+    def __init__(self, name, model):
+        super().__init__(name)
+        self.model = model
+
+    def start(self):
+        print(f"{self.name}, {self.model} is starting")
+
+
+# Creating and using objects outside the class
+v = Vehicle("Truck")
+v.start()
+
+c = Car("Honda", "Civic")
+c.start()

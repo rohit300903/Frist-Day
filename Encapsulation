@@ -1,0 +1,27 @@
+class Person:
+    def __init__(self, name, age):  # Correct constructor
+        self.name = name
+        self.set_age(age)           # Using setter to apply validation
+
+    def get_age(self):
+        return self.__age           # Accessing private variable
+
+    def set_age(self, age):
+        if age > 0:
+            self.__age = age        # Setting private variable
+        else:
+            print("Invalid age. Must be greater than 0.")
+            self.__age = 0
+
+    def display(self):
+        print(f"Name: {self.name}, Age: {self.get_age()}")
+
+# Creating objects for 3 persons
+person1 = Person("Rohit", 25)
+person2 = Person("Anjali", 30)
+person3 = Person("Karan", 22)
+
+# Displaying their data
+person1.display()
+person2.display()
+person3.display()

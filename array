@@ -1,0 +1,92 @@
+
+
+import numpy as np
+arr=np.array([[[1,2,3,4,5],[5,123,4,5,6],[1,2,3,4,5]]])
+print(arr)
+
+
+
+import numpy as np
+a=np.array(42)
+b=np.array([1,2,3,4,5])
+c=np.array([[1,2,3,4],[5,6,7,8]])
+d=np.array([[[1,2,3],[4,5,6],[7,8,9]]])
+print(a.ndim)
+print(b.ndim)
+print(c.ndim)
+print(d.ndim)
+
+
+
+
+import numpy as np
+arr=np.array[1,2,3,4],[6,7,8,9,0])
+print(arr[])
+
+
+import numpy as np
+
+arr = np.array([[[1, 2, 3, 4, 5],
+                 [6, 7, 8, 9, 0],
+                 [11, 22, 33, 44, 55]]])
+
+# Accessing the element at block 0, row 2, column 1
+print(arr[0, 2, 1])  
+
+
+
+arr = np.array([
+    [[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5]],
+    [1,2,3,4,5],
+    [6,7,8,9,0],
+    [11,22,33,44,55],
+    [1,2,3,4,5]
+])
+
+
+
+import numpy as np
+
+# Fixed the array (removed extra comma)
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 4, 5, 6, 7, 8, 4, 3, 2, 4, 5, 6, 7, 89, 995, 4, 3, 5])
+
+# Access the last 4th to 2nd element (slice from -4 to -1)
+print(arr[-4:-1])
+
+
+import numpy as np
+arr=np.array([[1,2,3,4,5,6],[6,7,8,9,0,11]])
+
+print(arr[1,4:5])
+
+import numpy as np
+
+arr = np.array([
+    [
+        [1, 2, 3, 4, 5, 6],
+        [6, 7, 8, 9, 0, 11],
+        [22, 33, 44, 55, 66, 77]
+    ]
+])
+
+# Example: Get element from block 0, row 2, column 4
+print("arr[0, 2, 4] =", arr[0, 2, 4])  # Output: 66
+
+# Or slice columns 4 to 5 from row 2
+print("arr[0, 2, 4:5] =", arr[0, 2, 4:5])  
+
+
+import numpy as np
+
+arr = np.array([
+    [
+        [1, 2, 3, 4, 5, 6],
+        [6, 7, 8, 9, 0, 11],
+        [22, 33, 44, 55, 66, 77],
+        [98, 76, 54, 43, 32, 11]  # Added comma above this line
+    ]
+])
+
+# Example: Get element from block 0, row 3, column 3 → 43
+print("arr[0, 3, 3] =", arr[0, 3, 3]) 
+
